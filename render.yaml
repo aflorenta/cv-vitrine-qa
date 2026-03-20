@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: cv-vitrine-qa
+    env: node
+    region: eu
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: CONTACT_RECIPIENT
+        value: florent.ali@outlook.fr
