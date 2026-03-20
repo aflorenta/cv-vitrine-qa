@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="F.A. — Consultant QA senior, 7 ans d'expérience. Expert en automatisation de tests et assurance qualité. Disponible en portage salarial IDF.">
+  <meta property="og:title" content="F.A. — Ingénieur Tests Senior | Expert QA">
+  <meta property="og:description" content="Consultant QA senior, 7 ans exp. Spécialiste automatisation, tests fonctionnels. Disponible portage salarial IDF.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://votre-domaine.fr">
+  <meta property="og:image" content="https://votre-domaine.fr/assets/og-preview.png">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://votre-domaine.fr">
+
+  <title>F.A. — Ingénieur Tests Senior | Expert QA | Portage Salarial</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: 0.95; }
+
+    .hero { padding: 60px 20px; background: #f8f9fa; }
+    .hero-title { font-size: 2rem; margin-bottom: 20px; color: #333; }
+    .hero-text { font-size: 1.05rem; line-height: 1.8; margin-bottom: 30px; max-width: 800px; }
+
+    .hero-actions { display: flex; gap: 15px; flex-wrap: wrap; margin: 40px 0; }
+    .btn { padding: 12px 24px; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s; }
+    .btn-primary { background: #667eea; color: white; }
+    .btn-primary:hover { background: #764ba2; transform: translateY(-2px); }
+    .btn-secondary { background: #f0f0f0; color: #333; border: 2px solid #667eea; }
+    .btn-secondary:hover { background: #667eea; color: white; }
+
+    .skills { padding: 60px 20px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+    .skill-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; }
+    .skill-card h3 { color: #667eea; margin-bottom: 10px; }
+    .skill-card ul { list-style: none; padding-left: 0; }
+    .skill-card li:before { content: "▪ "; color: #667eea; margin-right: 8px; }
+
+    .experience { padding: 60px 20px; background: white; }
+    .experience-item { margin-bottom: 20px; padding: 0; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+    .experience-item.collapsible .experience-header { cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #f8f9fa; transition: background 0.3s; user-select: none; }
+    .experience-item.collapsible .experience-header:hover { background: #f0f0f5; }
+    .experience-item.collapsible .experience-header h3 { margin: 0; color: #667eea; font-size: 1.1rem; flex: 1; }
+    .experience-item.collapsible .experience-header .date { color: #999; font-size: 0.9rem; margin: 0 20px 0 0; min-width: 150px; }
+    .experience-item.collapsible .experience-header .toggle-icon { color: #667eea; font-size: 1.2rem; transition: transform 0.3s; }
+    .experience-item.collapsible .experience-header.open .toggle-icon { transform: rotate(180deg); }
+    .experience-item.collapsible .experience-content { padding: 20px; display: none; background: white; border-top: 1px solid #e0e0e0; }
+    .experience-item.collapsible .experience-content.open { display: block; }
+    .experience-item.collapsible .experience-content p { margin-bottom: 12px; line-height: 1.6; }
+    .experience-item.collapsible .experience-content strong { color: #667eea; }
+    .experience-item.collapsible .experience-content ul { margin-left: 20px; margin-bottom: 12px; }
+    .experience-item.collapsible .experience-content li { margin-bottom: 6px; }
+
+    .contact-section { padding: 60px 20px; background: #f8f9fa; }
+    .contact-highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .contact-hi { background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .contact-hi-icon { font-size: 2rem; margin-bottom: 10px; }
+    .contact-hi-text strong { display: block; color: #667eea; margin-bottom: 8px; }
+    .contact-hi-text a { color: #667eea; text-decoration: none; }
+    .contact-hi-text a:hover { text-decoration: underline; }
+
+    .form-container { background: white; padding: 40px; border-radius: 12px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; font-family: inherit; }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { outline: none; border-color: #667eea; box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); }
+
+    .form-submit { display: flex; gap: 10px; }
+    .btn-submit { flex: 1; padding: 14px; background: #667eea; color: white; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+    .btn-submit:hover:not(:disabled) { background: #764ba2; transform: translateY(-2px); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .form-feedback { padding: 12px 16px; border-radius: 6px; margin-bottom: 16px; font-size: 0.95rem; }
+    .form-feedback.success { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .form-feedback.error { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+    footer { background: #333; color: white; text-align: center; padding: 30px 20px; margin-top: 60px; }
+    footer a { color: #667eea; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .divider { height: 2px; background: linear-gradient(90deg, transparent, #667eea, transparent); margin: 60px 0; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      .hero-title { font-size: 1.5rem; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>F.A.</h1>
+      <p>Ingénieur Tests Senior • Expert QA • Consultant en Automatisation</p>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2 class="hero-title">Bienvenue sur mon CV vitrine</h2>
+      <p class="hero-text">
+        Ingénieur Tests Senior avec 8+ ans d'expérience en assurance qualité, tests fonctionnels et automatisation. Expert en JIRA, XRAY, WebEngine et Ready API. Spécialisé dans les domaines financier, banque et grande distribution. Maîtrise les méthodologies Agile SCRUM et Cycle en V. Certifié ISTQB Fondation.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Proposer une mission</a>
+        <a href="mailto:florent.ali@outlook.fr" class="btn btn-secondary">Me contacter par email</a>
+        <a href="/assets/cv-fa-qa.pdf" download class="btn btn-secondary">↓ Télécharger mon CV</a>
+        <a href="https://www.linkedin.com/in/florent-a-91a66312" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Voir mon LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <div class="container">
+      <h2>Compétences clés</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>🧪 Outils de Tests</h3>
+          <ul>
+            <li>JIRA, XRAY, Squash TM</li>
+            <li>Bugtracker, Mantis BT, Redmine</li>
+            <li>WebEngine (NoCode)</li>
+            <li>ALM, UFT</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>🛠️ API & Automatisation</h3>
+          <ul>
+            <li>Ready API, Bruno</li>
+            <li>Kafka topics</li>
+            <li>Tests de Web Services</li>
+            <li>Batch & flux externes</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>📊 Méthodologies</h3>
+          <ul>
+            <li>Agile SCRUM</li>
+            <li>Cycle en V</li>
+            <li>Example Mapping (Gherkin)</li>
+            <li>Pair-test & Tres Amigos</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>💻 Langages & SGBD</h3>
+          <ul>
+            <li>JavaScript, HTML, CSS</li>
+            <li>SQL, Java, Python</li>
+            <li>MySQL</li>
+            <li>Office 365</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Domains Section -->
+  <section style="padding: 60px 20px; background: white;">
+    <div class="container">
+      <h2>Domaines d'expertise</h2>
+      <div class="skills-grid" style="margin-top: 30px;">
+        <div class="skill-card">
+          <h3>🏦 Secteur Financier</h3>
+          <ul>
+            <li>Gestion de sinistres (IARD)</li>
+            <li>Crédits à la consommation</li>
+            <li>Leasing & crédit automobiles</li>
+            <li>Conformité réglementaire (LCBFT)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>🏪 Secteur Retail</h3>
+          <ul>
+            <li>Grande distribution</li>
+            <li>Points de vente (caisses, bornes)</li>
+            <li>Gestion des commandes</li>
+            <li>Paiement multicanal (Apple Pay, PayPal, etc.)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>🛒 E-Commerce & Omnicanal</h3>
+          <ul>
+            <li>Parcours d'achat mobile & web</li>
+            <li>Intégrations paiement (Adyen, TPE)</li>
+            <li>Click & Collect</li>
+            <li>Stratégie omnicanale</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>🎓 Certifications & Formation</h3>
+          <ul>
+            <li>ISTQB Fondation (82.5%)</li>
+            <li>Formation Développeur Web</li>
+            <li>Master 1 Métiers d'étude & conseil</li>
+            <li>Anglais B2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Experience Section -->
+  <section class="experience">
+    <div class="container">
+      <h2>Expériences professionnelles</h2>
+
+      <div class="experience-item collapsible">
+        <div class="experience-header" onclick="toggleAccordion(this)">
+          <h3>Ingénieur Tests • Céline</h3>
+          <span class="date">01/2026 – Aujourd'hui</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="experience-content">
+          <p><strong>Contexte :</strong> Tests de l'application mobile SEAMLESS (grande distribution). Prise en charge des parcours d'achat, moyens de paiement, gestion des caisses et commandes sur 1485 restaurants.</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>Gestion des stores, des caisses et des commandes sur CEGID Y2</li>
+            <li>Exécution des tests sur iPhone</li>
+            <li>Tests des différents moyens de paiement : TPE, Pay by Link, QR code, Apple Pay, PayPal avec Adyen Test</li>
+            <li>Suivi des commandes sur Salesforce Order Manager</li>
+            <li>Préparation et livraison des commandes, gestion facturation</li>
+          </ul>
+          <p><strong>Outils :</strong> CEGID Y2, Salesforce Order Manager, Adyen Test, Tests mobiles iOS</p>
+        </div>
+      </div>
+
+      <div class="experience-item collapsible">
+        <div class="experience-header" onclick="toggleAccordion(this)">
+          <h3>Ingénieur Tests • SMA BTP</h3>
+          <span class="date">10/2025 – 12/2025</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="experience-content">
+          <p><strong>Contexte :</strong> Squad de 5 personnes. Assurance qualité fonctionnelle et technique des applications Web de gestion de sinistres et Reporting pour les gestionnaires de sinistres.</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>Description de 800 cas de test dans ALM avec formules Excel avancées</li>
+            <li>Exécution des tests automatisés avec ALM et UFT</li>
+            <li>Débogage et analyse des cas en échec pour la fiabilité des scripts d'automatisation</li>
+            <li>Déclaration et suivi des anomalies dans Redmine</li>
+            <li>Rapports d'avancement hebdomadaires</li>
+          </ul>
+          <p><strong>Résultats :</strong> Amélioration de SMA gestion de sinistres et Morep</p>
+          <p><strong>Outils :</strong> ALM, UFT, Redmine, Excel</p>
+        </div>
+      </div>
+
+      <div class="experience-item collapsible">
+        <div class="experience-header" onclick="toggleAccordion(this)">
+          <h3>Ingénieur Tests • AXA FRANCE</h3>
+          <span class="date">03/2022 – 09/2025</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="experience-content">
+          <p><strong>Contexte :</strong> Squad de 10 personnes. Assurance qualité de plusieurs applications Web de gestion de sinistres (IARD Sinistres), contrats et risques d'entreprise (IARD Entreprises).</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>Rédaction de plans de test, scénarios et cas de test via Xray et IA AXA (SecuréGPT)</li>
+            <li>Rédaction de la stratégie de test</li>
+            <li>Création de prompts contextualisés pour développer des projets avec l'IA</li>
+            <li>Rédaction d'Example Mapping des US en Gherkin (ceremonies 3 Amigos)</li>
+            <li>Préparation des jeux de données nécessaires à l'exécution</li>
+            <li>Exécution de batch et flux avec prestataires externes</li>
+            <li>Tests de bout en bout, d'intégration et de système</li>
+            <li>Campagnes de tests de non-régression pour chaque nouvelle release</li>
+            <li>Analyse des résultats et vérification de conformité</li>
+            <li>Déclaration et suivi des anomalies via Jira</li>
+            <li>Support aux métiers durant toute la phase de test</li>
+            <li>Automatisation des parcours avec WebEngine (NoCode)</li>
+            <li>Développement et exécution de tests pour vérifier les réponses API</li>
+          </ul>
+          <p><strong>Outils :</strong> Jira, Xray, Kafka, Bruno, ReadyAPI, Kibana, Postman, WebEngine</p>
+        </div>
+      </div>
+
+      <div class="experience-item collapsible">
+        <div class="experience-header" onclick="toggleAccordion(this)">
+          <h3>Ingénieur Tests • McDonald's France</h3>
+          <span class="date">2017 – 2018</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="experience-content">
+          <p><strong>Contexte :</strong> Équipe de qualification de 3 testeurs. Configuration et test des équipements de prise de commandes (Caisses, Bornes, Click & Collect, Deliveroo, Uber Eats) pour déploiement sur 1485 restaurants en France.</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>Mise en place des packages des campagnes marketing des produits McDonald's pour les 1485 restaurants</li>
+            <li>Exécution des tests fonctionnels avec Squash sur la prise, paiement et affichage des commandes</li>
+            <li>Configuration des équipements destinés aux 1485 restaurants et tests techniques de déploiement</li>
+            <li>Exécution de scripts SQL pour migrations des bases de données des modules internes</li>
+            <li>Tests fonctionnels suite aux mises à jour des BDD des 1485 restaurants</li>
+            <li>Suivi et validation du parcours de commande</li>
+            <li>Assurance du bon fonctionnement des modules suite aux migrations</li>
+            <li>Remontée d'anomalies via Bugtracker</li>
+            <li>Reporting d'avancement (Attendu/réalisé, Couverture des exigences)</li>
+            <li>Rédaction des livrables</li>
+          </ul>
+          <p><strong>Outils :</strong> Squash, Bugtracker, MySQL, Machine Virtuelle, Windows server</p>
+        </div>
+      </div>
+
+      <div class="experience-item collapsible">
+        <div class="experience-header" onclick="toggleAccordion(this)">
+          <h3>Ingénieur Tests • Crédit Agricole Consumer Finance</h3>
+          <span class="date">01/2018 – 06/2020</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="experience-content">
+          <p><strong>Contexte :</strong> Équipe de 16 testeurs. Mise en place de la stratégie omnicanale de la banque. Assurance qualité et support du projet DIGONCONSO 2.0 - refonte des offres multicanales de crédits à la consommation (Crédit personnel, Crédit Travaux, Crédit automobiles, leasing, etc.).</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>Analyse des besoins et exigences client au travers des ateliers métier</li>
+            <li>Revue des user stories et leur évolution via JIRA</li>
+            <li>Préparation des jeux de données</li>
+            <li>Installation et configuration de la plateforme de test client</li>
+            <li>Rédaction de scénarios et cas de test via Squash à partir des user stories</li>
+            <li>Exécution des campagnes de tests (fonctionnels, techniques, portabilité)</li>
+            <li>Campagnes de tests de non-régression pour chaque nouvelle release</li>
+            <li>Identification, remontée et suivi des anomalies via Mantis/JIRA</li>
+            <li>Reporting d'avancement auprès du chef de projet</li>
+            <li>Rédaction du PV de recette et bilan de tests</li>
+            <li>Rédaction des guides utilisateurs</li>
+            <li>Participation aux rituels agiles</li>
+            <li>Support UAT et formation des utilisateurs</li>
+            <li>Support Logiciel Niveau 2/3</li>
+            <li>Accompagnement et formation des nouveaux arrivants</li>
+          </ul>
+          <p><strong>Outils :</strong> JIRA, Squash TM, Mantis, Systèmes d'exploitation (MacOS, iOS, Windows, Android), Microsoft Office</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Formation & Certifications Section -->
+  <section style="padding: 60px 20px; background: #f8f9fa;">
+    <div class="container">
+      <h2>Formation & Certifications</h2>
+      <div class="skills-grid" style="margin-top: 30px;">
+        <div class="skill-card" style="border-left-color: #764ba2;">
+          <h3>🏆 ISTQB Fondation</h3>
+          <p style="margin-bottom: 15px;"><strong>Certification obtenue avec 82.5%</strong></p>
+          <p style="margin-bottom: 15px; font-size: 0.95rem;">Formation complète en méthodologies de qualification logicielle couvrant :</p>
+          <ul>
+            <li>Recueil et analyse du besoin client</li>
+            <li>Lecture et analyse des spécifications</li>
+            <li>Élaboration de la stratégie et organisation de la recette</li>
+            <li>Conception de tests et jeux de données</li>
+            <li>Exécution avec SQUASH TM</li>
+            <li>Requêtes SQL basiques</li>
+            <li>Gestion des environnements de tests</li>
+            <li>Automatisation avec KATALON STUDIO</li>
+            <li>Déclaration d'anomalies sur MANTIS BT et JIRA</li>
+            <li>Pilotage de la recette (avancement, risques, anomalies)</li>
+            <li>Tests fonctionnels de Web Services (Ready API)</li>
+            <li>Agile Scrum et Cycle en V</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Projets Académiques Section -->
+  <section style="padding: 60px 20px; background: white;">
+    <div class="container">
+      <h2>Projets Académiques</h2>
+      <p style="font-size: 1.05rem; margin-bottom: 30px; color: #666;">Projets réalisés en équipe (3-4 personnes) avec méthodologie Agile SCRUM</p>
+
+      <div class="skills-grid" style="margin-top: 30px;">
+        <div class="skill-card">
+          <h3>🏫 Gestion des Activités d'École</h3>
+          <p><strong>Type :</strong> Application Web</p>
+          <p><strong>Objectif :</strong> Assurer la qualité d'une application de gestion des activités d'une école</p>
+          <p><strong>Méthodologie :</strong> Agile SCRUM</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>AMOA : Analyse des besoins, User Stories, Backlog produit (JIRA)</li>
+            <li>Test & Recette : Plans de test, scénarios (SQUASH TM), tests fonctionnels</li>
+            <li>Identification et déclaration des anomalies (JIRA)</li>
+            <li>Reporting journalier (Attendu/réalisé, Couverture, Bilan)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>🍽️ Gestion des Absences Cantine</h3>
+          <p><strong>Type :</strong> Traitements Automatiques (Batch)</p>
+          <p><strong>Objectif :</strong> Assurer la qualité de traitements automatiques pour la gestion des absences d'une cantine</p>
+          <p><strong>Méthodologie :</strong> Agile SCRUM</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>AMOA : Analyse des exigences, constitution du Backlog</li>
+            <li>Test & Recette : Définition de la stratégie de tests</li>
+            <li>Rédaction de scénarios et cas de test (SQUASH TM)</li>
+            <li>Tests fonctionnels et techniques des traitements batch</li>
+            <li>Identification et suivi des anomalies</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>✈️ Gestion d'Avions au Sol</h3>
+          <p><strong>Type :</strong> Application Web - Cycle en V</p>
+          <p><strong>Objectif :</strong> Mettre en place une stratégie de recette Cycle en V</p>
+          <p><strong>Méthodologie :</strong> Cycle en V</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>Définition complète de la stratégie de recette</li>
+            <li>Conception de tests et jeux de données</li>
+            <li>Exécution de campagnes de tests fonctionnels</li>
+            <li>Gestion des anomalies et suivi</li>
+            <li>Pilotage de la recette</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>🌱 Gestion de Jardins Partagés</h3>
+          <p><strong>Type :</strong> Application Web - Agile Scrum</p>
+          <p><strong>Objectif :</strong> Mettre en place une stratégie de recette Agile Scrum</p>
+          <p><strong>Méthodologie :</strong> Agile SCRUM</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>Participation aux cérémonies Agile (Sprint planning, Daily, Retrospectives)</li>
+            <li>Rédaction des Scénarios et cas de test (SQUASH TM)</li>
+            <li>Exécution des tests fonctionnels et techniques</li>
+            <li>Identification et déclaration des anomalies (JIRA)</li>
+            <li>Reporting et suivi de l'avancement</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top: 40px; padding: 20px; background: #f0f0f5; border-radius: 8px; font-size: 0.95rem; color: #666;">
+        <strong>Environnement technique :</strong> Squash TM, JIRA, Trello, SQL, MySQL, Gantt
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 40px;">Vous avez une mission pour moi?</h2>
+
+      <div class="contact-highlights">
+        <div class="contact-hi">
+          <div class="contact-hi-icon">📞</div>
+          <div class="contact-hi-text">
+            <strong>Disponibilité</strong>
+            <p>Portage salarial IDF</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-container">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Votre nom *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Votre email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="type">Type de mission *</label>
+            <select id="type" name="type" required>
+              <option value="">-- Sélectionnez une option --</option>
+              <option value="Recette fonctionnelle">Recette fonctionnelle</option>
+              <option value="Automatisation tests">Automatisation tests</option>
+              <option value="Mise en place stratégie QA">Mise en place stratégie QA</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Décrivez votre projet *</label>
+            <textarea id="message" name="message" placeholder="Contexte, durée estimée, technologies..." required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-submit">Envoyer ma proposition →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© <span class="copyright-year">2026</span> F.A. — Ingénieur Tests Senior • Consultant QA</p>
+      <p style="margin-top: 10px; font-size: 0.9rem;"><a href="/sitemap.xml">Sitemap</a> • <a href="/robots.txt">Robots.txt</a></p>
+    </div>
+  </footer>
+
+  <script>
+    /**
+     * Handle form submission with email validation and server-side sending
+     * Fixes for v1.0.0:
+     * 1. ✓ Google Antigravity removed, replaced with Playwright
+     * 2. ✓ Real email sending via /api/contact endpoint
+     * 3. ✓ Contact links added (email, LinkedIn, CV download)
+     * 4. ✓ Copyright year auto-updated with JavaScript
+     */
+
+    // Accordion toggle functionality - MUST be global for onclick attribute
+    function toggleAccordion(headerEl) {
+      const item = headerEl.closest('.experience-item.collapsible');
+      const content = item.querySelector('.experience-content');
+      const isOpen = content.style.display !== 'none' && content.style.display !== '';
+
+      // Close all other accordions
+      document.querySelectorAll('.experience-item.collapsible .experience-content').forEach(el => {
+        if (el !== content && (el.style.display !== 'none')) {
+          el.style.display = 'none';
+          el.parentElement.querySelector('.experience-header').classList.remove('open');
+          const icon = el.parentElement.querySelector('.toggle-icon');
+          if (icon) icon.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      // Toggle current accordion
+      if (isOpen) {
+        content.style.display = 'none';
+        headerEl.classList.remove('open');
+        const icon = headerEl.querySelector('.toggle-icon');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.style.display = 'block';
+        headerEl.classList.add('open');
+        const icon = headerEl.querySelector('.toggle-icon');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const type = form.querySelector('#type').value;
+      const message = form.querySelector('#message').value.trim();
+      const submitBtn = form.querySelector('.btn-submit');
+
+      // Client-side validation
+      if (!name || !email || !type || message.length < 10) {
+        showFormFeedback(form, 'error', 'Merci de remplir tous les champs correctement.');
+        return;
+      }
+
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Envoi en cours…';
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, type, message }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          showFormFeedback(form, 'success', '✓ ' + data.message);
+          // Clear form
+          form.querySelectorAll('input, textarea, select').forEach(el => el.value = '');
+          if (form.querySelector('#type')) form.querySelector('#type').value = '';
+        } else {
+          const errorMsg = data.error || 'Une erreur est survenue. Réessayez.';
+          showFormFeedback(form, 'error', errorMsg);
+        }
+      } catch (error) {
+        console.error('[Form Error]', error);
+        showFormFeedback(form, 'error', 'Erreur réseau. Vérifiez votre connexion et réessayez.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer ma proposition →';
+      }
+    }
+
+    function showFormFeedback(form, type, message) {
+      let feedbackEl = form.querySelector('.form-feedback');
+      if (!feedbackEl) {
+        feedbackEl = document.createElement('div');
+        feedbackEl.className = 'form-feedback';
+        form.insertBefore(feedbackEl, form.querySelector('.form-submit'));
+      }
+      feedbackEl.textContent = message;
+      feedbackEl.classList.remove('success', 'error');
+      feedbackEl.classList.add(type);
+      feedbackEl.style.display = 'block';
+    }
+
+    // Auto-update copyright year and attach accordion event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearEl = document.querySelector('.copyright-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // Attach click event listeners to all accordion headers
+      const headers = document.querySelectorAll('.experience-item.collapsible .experience-header');
+      headers.forEach(header => {
+        header.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleAccordion(this);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

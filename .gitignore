@@ -1,0 +1,27 @@
+# Environment variables (never commit real credentials)
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+npm-debug.log
+npm-error.log
+yarn-error.log
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
